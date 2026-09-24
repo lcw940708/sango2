@@ -2,7 +2,7 @@
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
-    <title>三國群英傳 2 網頁版</title>
+    <title>三國群英傳 2 網頁版 (Win95)</title>
     <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
     <style>
         html, body, #app {
@@ -22,7 +22,9 @@
     <script>
         Dos(document.getElementById("app"), {
             url: "https://github.com/lcw940708/sango2/releases/download/v1.0.0/sango2.zip",
-            command: "_inmmserv.exe",
+            // 指定使用 Win95 系統鏡像來運行 Windows 程式
+            autoStart: true,
+            windows: "win95",
         });
     </script>
 </body>
