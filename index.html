@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>三國群英傳 2 網頁版</title>
-    <!-- 1. 引入 js-dos 官方 CSS 樣式 -->
+    <!-- 引入 js-dos v8 / v7 樣式 -->
     <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
     <style>
         html, body, #app {
             width: 100%;
             height: 100%;
             margin: 0;
-            padding: 0;
-            background: #111;
+            padding: 0. background: #111;
             overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <!-- 2. 建立掛載遊戲的容器 -->
     <div id="app"></div>
 
-    <!-- 3. 引入 js-dos 官方 JavaScript 核心庫 -->
+    <!-- 引入 js-dos 核心庫 -->
     <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
-
-    <!-- 4. 初始化並執行你的 GitHub Release 檔案 -->
     <script>
         Dos(document.getElementById("app"), {
-            url: "https://github.com/lcw940708/sango2/releases/download/v1.0.0/sango2.zip"
+            url: "https://github.com/lcw940708/sango2/releases/download/v1.0.0/sango2.zip",
+            // 這裡指定自動運行的執行檔名稱（請確保大小寫同你 zip 入面完全一致）
+            autoStart: true,
+        }).then((dos) => {
+            // 可以在這裡處理成功載入後的事件
+            console.log("遊戲載入成功！");
         });
     </script>
 </body>
