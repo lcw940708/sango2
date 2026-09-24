@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>三國群英傳 2 網頁版</title>
-    <!-- 引入 js-dos v7 樣式 -->
+    <!-- 1. 引入 js-dos v7 樣式 -->
     <link rel="stylesheet" href="https://js-dos.com/v7/build/dos.css">
-    <style>
-        body { background: #111; color: #fff; text-align: center; margin: 0; }
-        #app { width: 100vw; height: 100vh; }
-    </style>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app" style="width: 100vw; height: 100vh;"></div>
 
-    <!-- 引入 js-dos v7 核心腳本 -->
+    <!-- 2. 必須先引入 js-dos 核心腳本（這行最關鍵，漏左就會報 Dos is not defined） -->
     <script src="https://js-dos.com/v7/build/dos.js"></script>
+
+    <!-- 3. 初始化模擬器並載入你的 GitHub Release 檔案 -->
     <script>
         Dos(document.getElementById("app"), {
-            // 將這裡換成你剛才複製的 GitHub Release 直連網址
-            url: "https://github.com/你的帳號名/倉庫名/releases/download/v1.0.0/sango2.zip",
+            url: "https://github.com/lcw940708/sango2/releases/download/v1.0.0/sango2.zip",
         });
     </script>
 </body>
