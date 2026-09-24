@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <title>三國群英傳 2 網頁版</title>
+    <!-- 引入 js-dos v7 樣式 -->
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/dos.css">
+    <style>
+        body { background: #111; color: #fff; text-align: center; margin: 0; }
+        #app { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- 引入 js-dos v7 核心腳本 -->
+    <script src="https://js-dos.com/v7/build/dos.js"></script>
+    <script>
+        Dos(document.getElementById("app"), {
+            url: "sango2.zip", // 指向你上傳的遊戲壓縮檔
+        });
+    </script>
+</body>
+</html>
